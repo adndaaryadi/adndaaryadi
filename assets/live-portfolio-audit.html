@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salsa Web Portfolio Audit Snapshot</title>
+    <style>
+      :root {
+        --bg: #f6efe7;
+        --ink: #14212c;
+        --muted: #5d6b75;
+        --accent: #8b5cf6;
+        --accent-soft: #ec4899;
+        --panel: rgba(255, 250, 244, 0.9);
+        --line: rgba(20, 33, 44, 0.1);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(236, 72, 153, 0.18), transparent 24%),
+          linear-gradient(180deg, #fbf7f1 0%, #efe4d8 100%);
+      }
+
+      .canvas {
+        padding: 42px;
+        display: grid;
+        gap: 24px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 18px;
+      }
+
+      .brand {
+        display: grid;
+        gap: 4px;
+      }
+
+      .brand small {
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .brand strong {
+        font-size: 34px;
+        font-family: Georgia, serif;
+      }
+
+      .nav {
+        display: flex;
+        gap: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .hero-copy,
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 28px;
+        box-shadow: 0 24px 60px rgba(20, 33, 44, 0.1);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, serif;
+        line-height: 0.95;
+      }
+
+      h1 { font-size: 64px; margin-top: 14px; max-width: 8ch; }
+      h2 { font-size: 38px; }
+      h3 { font-size: 22px; }
+
+      p, li {
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 16px;
+      }
+
+      .cta {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .pill {
+        display: inline-flex;
+        padding: 11px 18px;
+        border-radius: 999px;
+        color: white;
+        background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+        font-weight: 700;
+      }
+
+      .pill.secondary {
+        background: #14212c;
+      }
+
+      .hero-art {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(145deg, #1f3b55, #4f46e5);
+        color: white;
+      }
+
+      .hero-art .blob {
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(2px);
+      }
+
+      .blob.a { width: 180px; height: 180px; top: 34px; left: 36px; background: rgba(255,255,255,0.18); }
+      .blob.b { width: 120px; height: 120px; bottom: 40px; left: 48px; background: rgba(236,72,153,0.42); }
+      .blob.c { width: 220px; height: 220px; right: 44px; bottom: 50px; background: rgba(255,255,255,0.14); }
+
+      .hero-art .stack {
+        position: absolute;
+        right: 40px;
+        top: 34px;
+        display: grid;
+        gap: 10px;
+        text-align: right;
+      }
+
+      .hero-art .stack span {
+        font-family: Georgia, serif;
+        font-size: 44px;
+        line-height: 0.9;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      ul {
+        margin: 14px 0 0;
+        padding-left: 18px;
+      }
+
+      .note {
+        border-left: 4px solid var(--accent);
+        padding-left: 16px;
+      }
+
+      .footer {
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="header">
+        <div class="brand">
+          <small>Audited Live Content • 24 April 2026</small>
+          <strong>salsa.tams.codes</strong>
+        </div>
+        <div class="nav">Beranda • Tentang • Skill • Proyek • Pengalaman • Kontak</div>
+      </div>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Data Analyst &amp; Researcher</div>
+          <h1>Halo, Saya Salsa</h1>
+          <p>
+            Mengubah data mentah menjadi insight bermakna. Mahasiswi Sosiologi
+            yang berfokus pada analisis data dan riset sosial.
+          </p>
+          <div class="cta">
+            <span class="pill">Lihat Portofolio</span>
+            <span class="pill secondary">Mari Berdiskusi</span>
+          </div>
+          <p class="note">
+            Audit teks live menunjukkan penekanan pada analisis data, riset sosial,
+            pengalaman KND, dan penerjemahan dataset kompleks ke visualisasi yang
+            mudah dipahami pembuat kebijakan.
+          </p>
+        </div>
+
+        <div class="hero-copy hero-art">
+          <div class="blob a"></div>
+          <div class="blob b"></div>
+          <div class="blob c"></div>
+          <div class="stack">
+            <span>data</span>
+            <span>research</span>
+            <span>policy</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="eyebrow">Tentang</div>
+          <h3>Fokus sosial + data</h3>
+          <p>
+            Menjembatani fenomena sosial dengan analisis data kuantitatif untuk
+            menghasilkan insight yang valid dan berdampak.
+          </p>
+        </article>
+        <article class="panel">
+          <div class="eyebrow">Keahlian</div>
+          <h3>Tools yang disebut</h3>
+          <ul>
+            <li>Python, Pandas, NumPy</li>
+            <li>SQL, PostgreSQL</li>
+            <li>Power BI, Tableau</li>
+            <li>Matplotlib, Seaborn</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <div class="eyebrow">Jejak</div>
+          <h3>KND + UNAS</h3>
+          <ul>
+            <li>Data Analyst Intern di KND</li>
+            <li>S1 Sosiologi UNAS</li>
+            <li>Fokus riset sosial kuantitatif</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="eyebrow">Proyek</div>
+          <h3>Analisis Data Disabilitas Nasional</h3>
+          <p>Pengolahan data sensus, visualisasi tren, dan rekomendasi kebijakan.</p>
+        </article>
+        <article class="panel">
+          <div class="eyebrow">Proyek</div>
+          <h3>Dashboard Visualisasi Data KND</h3>
+          <p>Monitoring tren regional, demografi, dan progres program aksesibilitas.</p>
+        </article>
+        <article class="panel">
+          <div class="eyebrow">Proyek</div>
+          <h3>Analisis Sentimen Media Sosial</h3>
+          <p>Text mining dan sentiment scoring untuk isu disabilitas dan inklusi sosial.</p>
+        </article>
+      </section>
+
+      <div class="footer">
+        Snapshot ini direkonstruksi dari konten live `salsa.tams.codes` yang berhasil diaudit via web retrieval.
+        Direct browser screenshot dari shell lokal gagal karena DNS/network resolver lokal.
+      </div>
+    </div>
+  </body>
+</html>

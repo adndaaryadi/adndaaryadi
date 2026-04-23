@@ -18,3 +18,13 @@ test("halaman contact punya github dan email", () => {
   assert.ok(html.includes("https://github.com/adndaaryadi"));
   assert.ok(html.includes("mailto:adindasalsaaryadi@gmail.com"));
 });
+
+test("repo profile menautkan portfolio web live", () => {
+  const combined = [
+    readFileSync("index.html", "utf8"),
+    readFileSync("projects.html", "utf8"),
+    readFileSync("contact.html", "utf8"),
+    readFileSync("README.md", "utf8"),
+  ].join("\n");
+  assert.ok(combined.includes("https://salsa.tams.codes/"));
+});

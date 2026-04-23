@@ -6,9 +6,9 @@
 ![Release](https://img.shields.io/github/v/release/adndaaryadi/adndaaryadi?display_name=tag&label=release)
 ![License](https://img.shields.io/github/license/adndaaryadi/adndaaryadi)
 
-Halo, aku Adinda Salsa Aryadi. Repo ini dibikin sebagai dua permukaan sekaligus: profil GitHub yang tampil langsung di halaman akun, dan portfolio statis yang bisa jalan lewat GitHub Pages. Tujuannya bukan sekadar bikin bio yang kelihatan penuh, tapi menghadirkan titik masuk yang jelas ke cara kerja, repo unggulan, dan gaya implementasi yang paling sering muncul di project-project yang dibangun. Fokus utamanya ada di repo engineering, frontend statis yang punya rasa, dan dokumentasi yang tidak ngeremehin detail.
+Halo, aku Adinda Salsa Aryadi. Repo ini dibikin sebagai dua permukaan sekaligus: profil GitHub yang tampil langsung di halaman akun, dan portfolio statis yang bisa jalan lewat GitHub Pages. Setelah update ini, repo profile juga secara eksplisit terhubung ke versi web live di [salsa.tams.codes](https://salsa.tams.codes/). Tujuannya bukan sekadar bikin bio yang kelihatan penuh, tapi menghadirkan titik masuk yang jelas ke cara kerja, repo unggulan, gaya implementasi yang paling sering muncul di project-project yang dibangun, dan surface web publik yang sudah tayang. Fokus utamanya ada di repo engineering, frontend statis yang punya rasa, dan dokumentasi yang tidak ngeremehin detail.
 
-Kalau profil GitHub cuma diisi satu paragraf pendek, orang biasanya cuma dapat kesan nama dan avatar. Kalau portfolio pribadi cuma mengejar estetika, orang sering gagal ngerti apa yang benar-benar dikerjakan. Repo ini sengaja ditempatkan di tengah: visualnya tetap niat, tapi semua bagian tetap mengarah ke hal-hal yang bisa dibuktikan. Ada halaman proyek, ada halaman kontak, ada workflow, ada test, ada screenshot, dan ada README besar yang menjelaskan semuanya tanpa muter-muter.
+Kalau profil GitHub cuma diisi satu paragraf pendek, orang biasanya cuma dapat kesan nama dan avatar. Kalau portfolio pribadi cuma mengejar estetika, orang sering gagal ngerti apa yang benar-benar dikerjakan. Repo ini sengaja ditempatkan di tengah: visualnya tetap niat, tapi semua bagian tetap mengarah ke hal-hal yang bisa dibuktikan. Ada halaman proyek, ada halaman kontak, ada workflow, ada test, ada screenshot, ada integrasi ke portfolio live, dan ada README besar yang menjelaskan semuanya tanpa muter-muter.
 
 ## Arah Profil Ini
 
@@ -18,11 +18,12 @@ Profil ini dirancang untuk menggambarkan satu pola kerja yang cukup konsisten:
 - bikin halaman yang tampil kuat tanpa jatuh ke template generik
 - ngubah notebook, data, atau ide awal jadi project yang lebih siap dipakai publik
 
-Itu sebabnya surface repo ini sengaja dibagi jadi tiga:
+Itu sebabnya surface repo ini sengaja dibagi jadi empat:
 
 1. `README.md` untuk profil GitHub dan dokumentasi utama
 2. `index.html`, `projects.html`, `contact.html` untuk portfolio Pages
-3. workflow, lint, test, dan metadata script supaya repo ini sendiri juga jadi bukti standar kerja
+3. `https://salsa.tams.codes/` sebagai portfolio web live yang memperluas surface publik Salsa
+4. workflow, lint, test, dan metadata script supaya repo ini sendiri juga jadi bukti standar kerja
 
 ## Yang Lagi Ditonjolkan dari Profil Ini
 
@@ -46,6 +47,7 @@ Profil ini juga menonjolkan kemampuan menerjemahkan artefak mentah menjadi repo 
 | `index.html` | landing page portfolio dengan positioning dan repo unggulan |
 | `projects.html` | sorotan proyek dengan konteks masalah, pendekatan, dan output |
 | `contact.html` | jalur kontak dan prinsip kerja |
+| `salsa.tams.codes` | portfolio web live yang menampilkan positioning Data Analyst & Researcher |
 
 ### Diagram Alur Surface
 
@@ -53,10 +55,12 @@ Profil ini juga menonjolkan kemampuan menerjemahkan artefak mentah menjadi repo 
 flowchart LR
   A[Visitor buka GitHub profile] --> B[README profil]
   A --> C[GitHub Pages home]
+  A --> F[salsa.tams.codes]
   C --> D[Projects]
   C --> E[Contact]
   B --> D
   B --> E
+  D --> F
 ```
 
 ### Diagram Struktur Repo
@@ -76,7 +80,13 @@ flowchart TD
 
 ## Featured Projects
 
-Repo ini sengaja menaruh tiga proyek sebagai pusat cerita, karena tiga inilah yang paling jelas memperlihatkan arah kerja.
+Repo ini sengaja menaruh tiga repo utama plus satu portfolio web live sebagai pusat cerita, karena kombinasi inilah yang paling jelas memperlihatkan arah kerja.
+
+### salsa.tams.codes
+
+Portfolio web live di `salsa.tams.codes` sekarang jadi pasangan langsung dari repo profile ini. Audit konten live tanggal 24 April 2026 menunjukkan bahwa situs tersebut memosisikan Salsa sebagai **Data Analyst & Researcher**, dengan narasi yang kuat di area analisis data, riset sosial, pengalaman di Komisi Nasional Disabilitas, proyek terpilih, jejak akademik, dan kontak publik. Buat repo profile ini, keberadaan `salsa.tams.codes` penting karena memberi permukaan publik yang lebih langsung, sementara repo GitHub tetap berfungsi sebagai dokumen teknis, hub proyek, dan bukti kualitas kerja di belakangnya.
+
+Karena shell lokal saat turn ini mengalami masalah resolver DNS, direct browser capture dari mesin ini gagal. Supaya tetap jujur dan tetap berguna, repo ini sekarang menyimpan **audited visual snapshot** yang direkonstruksi dari konten live yang berhasil diaudit lewat browser web retrieval, bukan pura-pura diklaim sebagai screenshot browser asli. Pendekatan ini sengaja dipilih agar integrasi portfolio live tetap masuk ke repo tanpa mengorbankan akurasi.
 
 ### tempo-sentiment-lab
 
@@ -133,7 +143,7 @@ Pendekatan ini dipilih karena profil repo harus ringan, gampang dipahami, dan ti
 | Workflow GitHub Actions | 3 |
 | Test Node | 2 |
 | Script utilitas | 2 |
-| Featured projects | 3 |
+| Featured repos + live portfolio | 4 |
 
 ### Dynamic profile stats
 
@@ -156,6 +166,12 @@ Statistik di atas bukan tujuan utama, tapi tetap berguna sebagai lapisan cepat u
 
 ![Halaman contact profile](assets/screenshots/contact.png)
 
+### Audited Snapshot Portfolio Web Live
+
+![Audited visual snapshot salsa.tams.codes](assets/screenshots/salsa-web-portfolio-audit.png)
+
+Bagian ini sengaja diberi label audited snapshot. Kontennya ditarik dari audit live `salsa.tams.codes` tanggal 24 April 2026, lalu divisualkan ulang secara jujur karena direct screenshot browser dari shell lokal gagal akibat masalah resolver DNS.
+
 ## Quality Gate Repo Ini
 
 Repo profile ini sengaja tidak dibiarkan jadi kumpulan file tanpa penjaga. Ada tiga lapisan quality gate yang dipasang:
@@ -170,6 +186,7 @@ Repo profile ini sengaja tidak dibiarkan jadi kumpulan file tanpa penjaga. Ada t
 
 1. seluruh halaman profile punya navigasi silang
 2. halaman kontak memuat GitHub dan email yang benar
+3. surface repo ini benar-benar menautkan `https://salsa.tams.codes/`
 
 Test-nya memang ringan, tapi pas untuk repo statis seperti ini. Prinsipnya bukan bikin test yang kelihatan canggih, tapi bikin test yang benar-benar ngebantu jaga kualitas.
 
@@ -193,6 +210,8 @@ Topik yang disiapkan untuk repo ini:
 - `github-pages`
 - `personal-brand`
 - `frontend`
+
+Selain metadata repo GitHub, integrasi ke `salsa.tams.codes` juga sekarang masuk ke konten repo dan surface Pages, jadi pembaca tidak perlu menebak apakah Salsa punya portfolio web live di luar GitHub atau tidak. Jawabannya sekarang jelas dan terlihat langsung.
 
 Contoh dry run:
 
@@ -226,6 +245,10 @@ Buka langsung:
 - `projects.html`
 - `contact.html`
 
+Untuk melihat portfolio web live:
+
+- `https://salsa.tams.codes/`
+
 Atau jalankan server lokal:
 
 ```bash
@@ -242,6 +265,7 @@ Banyak profile repo berhenti di satu banner, satu kalimat bio, dan satu list bad
 - standar kualitas yang dijaga itu apa?
 - frontend yang dikerjakan maunya seperti apa?
 - project unggulan apa dan kenapa dipilih?
+- versi web live-nya ada di mana dan bagaimana hubungannya dengan repo GitHub?
 - kalau orang mau ngontak atau kolaborasi, jalurnya ke mana?
 
 Dengan README yang lebih lengkap, profil ini tidak cuma jadi pajangan, tapi juga dokumen orientasi. Orang yang buka repo ini bisa langsung dapat gambaran yang cukup utuh tanpa harus berpindah-pindah dulu ke banyak tempat.
@@ -276,6 +300,7 @@ Roadmap ini sengaja dijaga realistis. Intinya bukan menumpuk fitur, tapi memperd
 ## Kontak
 
 - GitHub: [github.com/adndaaryadi](https://github.com/adndaaryadi)
+- Portfolio Web: [salsa.tams.codes](https://salsa.tams.codes/)
 - Email: [adindasalsaaryadi@gmail.com](mailto:adindasalsaaryadi@gmail.com)
 
 ## Kontributor
