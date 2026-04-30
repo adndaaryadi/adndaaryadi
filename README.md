@@ -5,6 +5,8 @@
 ![CI](https://img.shields.io/github/actions/workflow/status/adndaaryadi/adndaaryadi/ci.yml?branch=main&label=CI)
 ![Release](https://img.shields.io/github/v/release/adndaaryadi/adndaaryadi?display_name=tag&label=release)
 ![License](https://img.shields.io/github/license/adndaaryadi/adndaaryadi)
+![Tests](https://img.shields.io/badge/tests-3%20passed-1f4d42)
+![Mobile First](https://img.shields.io/badge/mobile--first-responsive-b37a2a)
 
 Halo, aku Adinda Salsa Aryadi. Repo ini dibikin sebagai dua permukaan sekaligus: profil GitHub yang tampil langsung di halaman akun, dan portfolio statis yang bisa jalan lewat GitHub Pages. Setelah update ini, repo profile juga secara eksplisit terhubung ke versi web live di [salsa.tams.codes](https://salsa.tams.codes/). Tujuannya bukan sekadar bikin bio yang kelihatan penuh, tapi menghadirkan titik masuk yang jelas ke cara kerja, repo unggulan, gaya implementasi yang paling sering muncul di project-project yang dibangun, dan surface web publik yang sudah tayang. Fokus utamanya ada di repo engineering, frontend statis yang punya rasa, dan dokumentasi yang tidak ngeremehin detail.
 
@@ -296,6 +298,20 @@ Ada beberapa arah pengembangan yang masuk akal untuk repo ini sesudah semua push
 5. kalau nanti perlu, menambah form kontak atau landing proyek tertentu tanpa merusak struktur yang sudah ada
 
 Roadmap ini sengaja dijaga realistis. Intinya bukan menumpuk fitur, tapi memperdalam hal yang sudah kuat.
+
+## Troubleshooting
+
+### Lint gagal: "File wajib hilang"
+
+Pastikan semua file inti ada di root: `index.html`, `projects.html`, `contact.html`, `style.css`, `app.js`.
+
+### Test gagal: navigasi tidak lengkap
+
+Test memverifikasi setiap halaman HTML punya link ke ketiga halaman. Pastikan setiap file HTML punya elemen `<nav>` dengan link ke `./index.html`, `./projects.html`, dan `./contact.html`.
+
+### GitHub Pages tidak tampil
+
+Pastikan workflow `pages.yml` aktif dan branch `main` sudah di-push. Pages deploy dari root directory.
 
 ## Kontak
 
